@@ -21,25 +21,26 @@
                     <!-- Post preview-->
                     <div class="post-preview">
                           {%for i in data:%}
-                             {%if i['id'] == 1 %}
+                            {% if i['id'] == 1 %}
                         <a href='{{url_for("post",value = 1)}}'>
-                            <h2 class="post-title">{{ i["title"] }}</h2>
-                            <h3 class="post-subtitle">{{ i["subtitle"] }}</h3>
+                            <h2 class="post-title"> {{ i.title|e }}</h2>
+                            <h3 class="post-subtitle"> {{ i.subtitle|e }}</h3>
                         </a>
                             {% endif %}
                         {% endfor %}
-                    </div>
+
+<!--                    </div>-->
 <!--                     Divider-->
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
                         {%for i in data:%}
-                             {%if i['id'] == 2 %}
+                            {% if i['id'] == 2 %}
                         <a href="{{url_for('post', value = 2)}}">
-                            <h2 class="post-title">{{i["title"]}}</h2>
-                            <h3 class="post-subtitle">{{i["subtitle"]}}</h3>
+                            <h2 class="post-title">{{i.title|e}}</h2>
+                            <h3 class="post-subtitle">{{i.subtitle|e}}</h3>
                         </a>
-                            {% endif %}
+                         {% endif %}
                         {% endfor %}
                     </div>
                     <!-- Divider-->
@@ -48,9 +49,9 @@
                     <div class="post-preview">
                         {%for i in data:%}
                              {%if i['id'] == 3 %}
-                        <a href={{url_for('post',value=3)}}>
-                            <h2 class="post-title">{{i['title']}}</h2>
-                            <h3 class="post-subtitle">{{i['subtitle']}}</h3>
+                        <a href="{{url_for('post',value=3)}}">
+                            <h2 class="post-title">{{i.title|e}}</h2>
+                            <h3 class="post-subtitle">{{i.subtitle|e}}</h3>
                         </a>
                             {% endif %}
                         {% endfor %}
