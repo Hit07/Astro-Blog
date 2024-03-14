@@ -47,7 +47,6 @@ def contact_form():
         return 'error'
 
 
-
 # @server.route("/form")
 # def form():
 #     return render_template("index_form.html")
